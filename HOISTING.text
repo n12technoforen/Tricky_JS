@@ -1,0 +1,114 @@
+console.log(employeeId);
+
+
+//////////////////////////////////
+
+
+
+console.log(employeeId);
+
+var employeeId = '19000';
+
+///////////////////////////////////
+
+
+var employeeId = '1234abe';
+
+(function () {
+  console.log(employeeId);
+  var employeeId = '123334';
+})();
+
+///////////////////////////////////////
+
+
+
+
+var employeeId = '1234abe';
+
+(function () {
+  console.log(employeeId);
+  var employeeId = '123334';
+  (function () {
+    var employeeId = 'abc1234';
+  })();
+})();
+
+
+////////////////////////////
+
+
+
+
+(function () {
+  console.log(typeof displayfunc);
+
+  var displayfunc = function () {
+    console.log('Hi im inside the dispalyfun');
+  };
+})();
+
+
+//////////////////////////////////////////
+
+
+var employeeId = 'abc1234';
+function foo() {
+  employeeId: '1234adc';
+  return;
+}
+
+foo();
+console.log(employeeId);
+
+
+////////////////////////////////////////////////
+
+
+
+var employeeId = 'abc1234';
+function foo() {
+  employeeId();
+  return;
+
+  function employeeId() {
+    console.log(typeof employeeId);
+  }
+}
+
+foo();
+// console.log(employeeId);
+
+
+////////////////////////////////////
+
+function foo() {
+  employeeId();
+  var product = 'Car';
+  return;
+
+  function employeeId() {
+    console.log(product);
+  }
+}
+
+foo();
+
+///////////////////////////////////
+
+
+
+(function foo() {
+  bar();
+  function bar() {
+    abc();
+    console.log(typeof abc);
+  }
+  function abc() {
+    console.log(typeof abc);
+  }
+})();
+
+
+
+/////////////////////////////////////////////
