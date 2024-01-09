@@ -1,0 +1,126 @@
+(function () {
+  var person = {
+    name: 'john',
+  };
+  person.salary = '10000$';
+  person['country'] = 'USA';
+
+  Object.defineProperty(person, 'phoneNo', {
+    value: '8888888888888',
+    enumerable: true,
+  });
+
+  console.log(Object.keys(person));
+})();
+
+////////////////////////////////
+
+
+(function () {
+  var person = {
+    name: 'john',
+  };
+  person.salary = '10000$';
+  person['country'] = 'USA';
+
+  Object.defineProperty(person, 'phoneNo', {
+    value: '8888888888888',
+    enumerable: false,
+  });
+
+  console.log(Object.keys(person));
+})();
+
+////////////////////////////////////////
+
+(function () {
+  var objA = {
+    foo: 'foo',
+    bar: 'bar',
+  };
+  var objB = {
+    foo: 'foo',
+    bar: 'bar',
+  };
+  console.log(objA === objB);
+  console.log(objA == objB);
+})();
+
+/////////////////////////////////////////////
+
+(function () {
+  var objA = new Object({ foo: 'foo' });
+  var objB = new Object({ foo: 'foo' });
+  console.log(objA === objB);
+  console.log(objA == objB);
+})();
+
+///////////////////////////////////////////////
+
+
+(function () {
+  var objA = Object.create({ foo: 'foo' });
+  var objB = Object.create({ foo: 'foo' });
+  console.log(objA === objB);
+  console.log(objA == objB);
+})();
+
+//////////////////////////////////////////
+
+
+
+(function () {
+  var objA = Object.create({ foo: 'foo' });
+  var objB = Object.create({ foo: 'foo' });
+  console.log(objA.toString() === objB.toString());
+  console.log(objA.toString() == objB.toString());
+})();
+
+
+////////////////////////////////////////////////
+
+
+(function () {
+  var objA = Object.create({ foo: 'foo' });
+  var objB = objA;
+  console.log(objA == objB);
+  console.log(objA === objB);
+  console.log(objA.toString() === objB.toString());
+  console.log(objA.toString() == objB.toString());
+})();
+
+
+////////////////////////////////////////////
+
+
+(function () {
+  var objA = Object.create({ foo: 'foo' });
+  var objB = objA;
+  objB.foo = 'bar';
+  console.log(objA.foo);
+  console.log(objB.foo);
+})();
+
+
+/////////////////////////////////
+(function () {
+  var objA = Object.create({ foo: 'foo' });
+  var objB = objA;
+  objB.foo = 'bar';
+  delete objA.foo;
+  console.log(objA.foo);
+  console.log(objB.foo);
+})();
+
+/////////////////////////////////////////
+
+(function () {
+  var objA = { foo: 'foo' };
+  var objB = objA;
+  objB.foo = 'bar';
+  delete objA.foo;
+  console.log(objA.foo);
+  console.log(objB.foo);
+})();
+
+///////////////////////////////////////
